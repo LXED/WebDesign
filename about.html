@@ -1,18 +1,113 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - WebDev Project</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to WebDev Project</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <head>
-        
+    <main class="main-content">
+        <section id="about" class="section">
+            <h2>About This Project</h2>
+            <p>
+                WebDev Project is a simple, hand-coded website built with plain HTML, CSS,
+                and JavaScript &mdash; no frameworks, no page builders. It started as our
+                first web development activity for [Course Name], and we kept building on
+                it as a way to actually understand what happens underneath the tools most
+                people start with.
+            </p>
+            <p>
+                Everything here was written from scratch: the layout, the styles, and the
+                small bits of interactivity. If something looks simple, that is on purpose.
+                We wanted to learn the fundamentals properly before reaching for shortcuts.
+            </p>
+        </section>
 
+        <section id="team" class="section">
+            <h2>Who We Are</h2>
+            <p>This project was built by two people.</p>
 
+            <ul class="team-list">
+                <li class="team-card">
+                    <div class="avatar">AB</div>
+                    <h3 class="team-name">[Full Name]</h3>
+                    <p class="team-role">Front-End &amp; Layout</p>
+                    <p class="team-bio">
+                        Built the page structure and navigation, and spent an unreasonable
+                        amount of time centering things. Interested in UI design and clean,
+                        readable code.
+                    </p>
+                </li>
 
-    </head>
+                <li class="team-card">
+                    <div class="avatar">CD</div>
+                    <h3 class="team-name">[Full Name]</h3>
+                    <p class="team-role">Styling &amp; Interactivity</p>
+                    <p class="team-bio">
+                        Handled the stylesheet and the JavaScript behavior. Enjoys figuring
+                        out why something works, not just that it does. Currently learning
+                        [Topic].
+                    </p>
+                </li>
+            </ul>
 
-    <body>
+            <p>
+                We split the work but reviewed everything together, which mostly meant
+                arguing about spacing.
+            </p>
+        </section>
 
+        <section id="stack" class="section">
+            <h2>What We Used</h2>
+            <ul class="tech-list">
+                <li><strong>HTML5</strong> &mdash; page structure and semantic markup</li>
+                <li><strong>CSS3</strong> &mdash; custom stylesheet, Flexbox layout, responsive spacing</li>
+                <li><strong>JavaScript</strong> &mdash; DOM interaction and event handling</li>
+                <li><strong>Git &amp; GitHub</strong> &mdash; version control and collaboration</li>
+                <li><strong>VS Code</strong> &mdash; our editor of choice</li>
+            </ul>
+        </section>
 
+        <section id="learned" class="section">
+            <h2>What We Learned</h2>
+            <p>
+                Starting from an empty file teaches you things a template cannot. We learned
+                how a browser reads a document top to bottom, why the box model matters more
+                than it first appears, and how quickly a stylesheet turns messy without
+                naming conventions. We also learned that "it works on my screen" is not the
+                same as "it works."
+            </p>
+            <p>
+                This project is still a work in progress, and we plan to keep improving it
+                as we learn more.
+            </p>
+        </section>
 
+        <section id="contact-cta" class="section">
+            <h2>Get in Touch</h2>
+            <p>
+                Have feedback, a question, or a suggestion? We would genuinely like to hear it.
+            </p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+    </main>
 
-    </body>
+    <footer class="footer">
+        <p>&copy; 2026 WebDev Project. All rights reserved.</p>
+    </footer>
 
-
+    <script src="/script/script.js"></script>
+</body>
 </html>
