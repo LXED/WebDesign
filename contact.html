@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WebDev Project</title>
-        <link rel="stylesheet" href="style/style.css">
-    </head>
-
-    <body>
-        <header class="header">
-        <h1>Contact Information</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WebDev Project</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to WebDev Project</h1>
         <nav>
             <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-        <div>
-            <p>Email: example@example.com</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Address: 123 Main Street, City, State 12345</p>
-        </div>
+    <main class="main-content">
+        <section id="contact" class="section">
+            <h2>Contact Information</h2>
+            <p>
+                Feel free to reach out to us with any questions or inquiries. We are happy
+                to hear feedback about the project.
+            </p>
 
-        <div id="carlos">
-            <p>Feel free to reach out to us with any questions or inquiries!</p>
+            <ul class="contact-list">
+                <li><strong>Email</strong> &mdash; example@example.com</li>
+                <li><strong>Phone</strong> &mdash; (123) 456-7890</li>
+                <li><strong>Address</strong> &mdash; 123 Main Street, City, State 12345</li>
+            </ul>
+        </section>
 
+        <section id="team-contact" class="section">
+            <h2>Reach Us Directly</h2>
+            <p>You can also contact either of us individually.</p>
 
-        </div>
+            <ul class="team-list">
+                <li class="team-card">
+                    <div class="avatar">CJ</div>
+                    <h3 class="team-name">Carlos John C. Aristoki</h3>
+                    <p class="team-role">Front-End &amp; Layout</p>
+                    <p class="team-bio">example@example.com</p>
+                </li>
 
-    </body>
+                <li class="team-card">
+                    <div class="avatar">JO</div>
+                    <h3 class="team-name">Jake S. Occe&ntilde;a</h3>
+                    <p class="team-role">Styling &amp; Interactivity</p>
+                    <p class="team-bio">example@example.com</p>
+                </li>
+            </ul>
+        </section>
 
+        <section id="about-cta" class="section">
+            <h2>About the Project</h2>
+            <p>
+                Want to know more about who we are and how this site was built?
+            </p>
+            <a href="about.html" class="btn">About Us</a>
+        </section>
+    </main>
 
+    <footer class="footer">
+        <p>&copy; 2026 WebDev Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
 </html>
