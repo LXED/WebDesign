@@ -1,0 +1,205 @@
+/* ==========================================================================
+   PAGES.CSS  --  ABOUT + CONTACT ONLY
+   Loaded AFTER style.css, which already handles the navbar, the sidenav,
+   the footer and the keyframes. Everything below is the blog-card look.
+   ========================================================================== */
+
+/* FALLBACK COLOR SA LIKOD NG VIDEO */
+html {
+  background-color: #FFFFBA;
+}
+
+/* style.css paints the body #FFFFBA, which would cover the fixed video */
+body {
+  background-color: transparent;
+}
+
+/* ---------- FIXED VIDEO BACKGROUND ---------- */
+
+.pageBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ---------- PAGE TITLE OVER THE VIDEO ---------- */
+
+/* style.css already gives h1 the Press Start 2P + centered treatment */
+.pageTitle {
+  color: #FFFFE6;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.65);
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- CONTENT COLUMN ---------- */
+
+.main-content {
+  max-width: 70rem;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem 0 6rem; /* extra left padding clears the fixed sidenav */
+}
+
+/* ---------- THE CARD (same 9-slice frame as the official dev blog) ---------- */
+
+.section {
+  background-color: #FFF3CC;
+  border: 15px solid transparent;
+  border-image: url("../asset/menu_border_noshadowtopleft.png") 34% / 1 / 0 stretch;
+  border-radius: 15px;
+  padding: 15px 30px 30px;
+  margin-bottom: 25px;
+
+  /* keeps the 45px sprite crisp instead of blurry when stretched */
+  image-rendering: pixelated;
+
+  animation: fadeIn 1s ease; /* keyframe lives in style.css */
+}
+
+.section h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #663300;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.section p,
+.section li {
+  color: #252525;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ---------- TEAM CARDS ---------- */
+
+.team-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.team-card {
+  flex: 1 1 18rem;
+  background-color: #FFFFE6;
+  border: 15px solid transparent;
+  border-image: url("../asset/menu_border_noshadowtopleft.png") 34% / 1 / 0 stretch;
+  border-radius: 15px;
+  padding: 10px 20px 20px;
+  overflow: hidden; /* contains the floated avatar */
+  image-rendering: pixelated;
+}
+
+/* SAME 75px AVATAR SIZE AS THE REAL BLOG */
+.avatar {
+  width: 75px;
+  height: 75px;
+  float: left;
+  margin: 0.35rem 1rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.1rem;
+  color: #FFFFE6;
+  background-color: #629140;
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #663300;
+  margin: 0.35rem 0 0.25rem;
+}
+
+.team-role {
+  color: #629140;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+}
+
+.team-bio {
+  margin: 0;
+}
+
+/* ---------- LISTS ---------- */
+
+.tech-list,
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0;
+}
+
+.tech-list li,
+.contact-list li {
+  padding: 0.4rem 0 0.4rem 1.6rem;
+  position: relative;
+}
+
+/* GREEN PIXEL BULLET */
+.tech-list li::before,
+.contact-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  width: 9px;
+  height: 9px;
+  background-color: #629140;
+}
+
+.tech-list strong,
+.contact-list strong {
+  color: #663300;
+}
+
+/* ---------- BUTTON (parang DEVELOPER BLOG plaque) ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #663300;
+  background-color: #F2C14E;
+  border: 4px solid #A6702A;
+  border-radius: 10px;
+  padding: 0.85rem 1.4rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #FFD469;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 700px) {
+  /* keeps clearing the sidenav rail, just tighter */
+  .main-content {
+    padding: 0 1rem 0 5rem;
+  }
+
+  .section {
+    padding: 10px 18px 20px;
+  }
+
+  .section h2 {
+    font-size: 0.85rem;
+  }
+}
