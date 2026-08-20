@@ -1,178 +1,325 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* PARA SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY________ */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    color: #333;
+  background-color: #FFFFBA;
+  margin: 0;
+  padding-top: 4rem;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
+/* ---------- NAV BAR VRO---------- */
+
+nav { 
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 4rem; 
+  background: #2064B1;
+  z-index: 2;
+  box-shadow: 2px 10px 5px 1px rgba(0,0,0,0.34);
 }
 
-.header h1 {
-    margin-bottom: 0.5rem;
+nav .navbar { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  height: 90%; 
+  max-width: 90%; 
+  margin: auto; 
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+.profpage img {
+  height: 2.8rem;
 }
 
-.nav-list a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.navbar .menu {
+  display: flex;
 }
 
-.nav-list a:hover {
-    text-decoration: underline;
+.navbar .menu li {
+  list-style: none;
+  margin: 0 1.5rem;
 }
 
-.main-content {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.navbar .menu li a {
+  color: #fff;
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.section {
-    background-color: #fff;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.navbar .menu li a:hover {
+  color:#D2E8FA;
+  transform: translateY(-2px);
 }
 
-.section h2 {
-    margin-bottom: 0.75rem;
-    color: #333;
+/* ---------- SIDE NAV AREA YALL ---------- */
+
+.sidenav {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-48%);
+  width: 60px;
+  padding: 10px 0;
+  background: #E3E3B6;
+  border-radius: 15px;
+  box-shadow: -1px -2px 21px 12px rgba(0,0,0,0.41);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  overflow: hidden;
+  z-index: 2;
+
+  animation: slideInLeft 0.6s ease-out;
 }
 
-.section p {
-    margin-bottom: 1rem;
+.sidenav a {
+  display: block;
 }
 
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
+.sidenav img {
+  width: 28px;
+  transition: transform 0.2s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.sidenav img:hover {
+  transform: scale(1.2);
 }
 
-.message {
-    margin-top: 1rem;
-    font-weight: bold;
-    color: #28a745;
+/* ---------- HOMEPAGE MAINN!! ---------- */
+
+.homepage {
+  position: relative;
+  width: 100%;
+  height: 55rem;
+  overflow: hidden;
 }
 
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 30px 30px;
 }
 
-.team-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+/* LOGO STARDEWW */
+.img1 {
+  width: 45%;
+  max-width: 50rem;
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-51%);
+  animation: fadeIn 1s ease-out, float 4s ease-in-out infinite;
 }
 
-.team-card {
-    flex: 1 1 250px;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
+/* FADE OVERLAY AREA yes */
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 6rem 1rem 3rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(217, 214, 82, 0) 0%,
+    rgba(255, 255, 186, 0.85) 45%,
+    #FFFFBA 100%
+  );
 }
 
-.avatar {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* TEXTSSS */
+.introTitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #2064B1;
+  margin: 0 0 1.5rem;
 }
 
-.team-name {
-    margin-bottom: 0.25rem;
-    color: #333;
+.introText {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.6;
 }
 
-.team-role {
-    margin-bottom: 0.75rem;
-    font-weight: bold;
-    color: #007bff;
+.highlight {
+  color: #e07a3f;
+  font-weight: bold;
 }
 
-.team-bio {
-    margin-bottom: 0;
-    text-align: left;
+/* ---------- DIVIDERSAHWDAHSD ---------- */
+
+.divider {
+  width: 80%;
+  max-width: 46rem;
+  height: 0.6rem;
+  background-color: #D65757;
+  border: none;
+  margin: 1.5rem auto;
 }
 
-.tech-list {
-    list-style: none;
+.divider2 {
+  width: 80%;
+  max-width: 56rem;
+  height: 0.6rem;
+  background-color: #91B374;
+  border: none;
+  margin-top: 110px;
 }
 
-.tech-list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+/* ---------- ABOUT US AREAWHADHAd ---------- */
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3.6rem;
 }
 
-.tech-list li:last-child {
-    border-bottom: none;
+.aboutus {
+  margin-top: 7rem;
+  background-color: #629140;
+  border: 6px dotted #90b241;
+  width: 70%;
+  max-width: 90rem;
+  min-height: 22rem;
+  border-radius: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  color: white;
+  box-shadow: 1px 13px 9px 6px rgba(0,0,0,0.75);
+
+  animation: fadeIn 1s ease;
 }
 
-a.btn {
-    display: inline-block;
-    text-decoration: none;
+.aboutus h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
 }
 
-#carlos {
-    
-    color: #333;
-    padding-top: 10px
+.aboutus p {
+  font-size: 1.4rem;
 }
 
-.contact-list {
-    list-style: none;
+/* ---------- TRAILER AREA!!!!!!! ---------- */
+
+h1#gameTrailer {
+  margin-top: 30%;
 }
 
-.contact-list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+.trailerArea {
+  background-color: #F56851;
+  border: 7px dotted #c34848;
+  width: 960px;
+  height: 615px;
+  border-radius: 30px;
+  box-shadow: 1px 13px 9px 6px rgba(0,0,0,0.75);
+  margin: 5% auto;
+
+  animation: fadeIn 1.3s ease;
 }
 
-.contact-list li:last-child {
-    border-bottom: none;
+iframe {
+  border-radius: 20px;
+  margin-top: 6%;
+  margin-left: 8%;
+  width: 800px;
+  height: 500px;
+  box-shadow: 2px 0px 5px 6px rgba(0,0,0,0.75);
+}
+
+/* ---------- DOWNLOAD AREA GUYS ---------- */
+
+.downloadarea {
+  text-align: center;
+  margin: 17rem auto 9rem;
+  padding: 2rem 1rem;
+}
+
+.downloadarea p {
+  font-size: 1.7rem;
+  font-weight: 650;
+}
+
+/* IMAGES BASTA */
+section#images ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}
+
+section#images img {
+  width: 87px;
+  transition: transform 0.25s ease;
+}
+
+section#images img:hover {
+  transform: scale(1.2) rotate(2deg);
+}
+/* ---------- KEYFRAMES BRUHRUHR ---------- */
+.ConcernedApe{
+  margin-left: 40%;
+}
+
+/* ---------- FOOTER AREA!! ---------- */
+
+footer {
+  background-color: #FFFFE6;
+  color: #B0ABAB;
+  padding: 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* ---------- KEYFRAMES BRUHRUHR ---------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateX(-51%) translateY(0); }
+  50% { transform: translateX(-51%) translateY(-10px); }
+  100% { transform: translateX(-51%) translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
 }
