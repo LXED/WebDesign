@@ -1,36 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebDev Project</title>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="asset/16x16 fav icon.png">
+    <title>StarDew valley</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-    <header class="header">
-        <h1>Welcome to WebDev Project</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="profpage">
+          <a href="index.html"><img src="asset/128x128 stardew logo chicken.png" alt="profile picture"></a>
+        </div>
+        <ul class="menu">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About Us</a></li>
+          <li><a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" target="_blank">Wiki</a></li>
+          <li><a href="#gameTrailer">Trailer</a></li>
+          <li><a href="#Download">Download</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <main class="main-content">
-        <section id="home" class="section">
-            <h2>Home</h2>
-            <p>This is a simple HTML template to get you started.</p>
-            <button id="action-btn" class="btn">Click Me</button>
-            <p id="message" class="message"></p>
-        </section>
-    </main>
+<div class="sidenav">
+  <a href="https://x.com/concernedape" target="_blank"><img src="asset/TWITTER LOGO.png" alt="Twitter"></a>
+  <a href="https://www.facebook.com/StardewValley" target="_blank"><img src="asset/FACEBOOK LOGO.png" alt="Facebook"></a>
+  <a href="https://www.reddit.com/r/StardewValley/" target="_blank"><img src="asset/REDDIT LOGO.png" alt="Reddit"></a>
+  <a href="contact.html" ><img src="asset/EMAIL ICON.png" alt="Email"></a>
+  <a href="https://discord.com/invite/stardewvalley" target="_blank"><img src="asset/DISCORD LOGO.png" alt="Discord"></a>
+</div>
 
-    <footer class="footer">
-        <p>&copy; 2026 WebDev Project. All rights reserved.</p>
-    </footer>
+    <div class="homepage" id="Home">
+      <video class="background" autoplay muted loop playsinline>
+  <source src="asset/StarDewVideoBackground.mp4" type="video/mp4">
+  Your browser does not support video backgrounds.
+    </video>
+      <img src="asset/main_logo.png" alt="stardew logo" class="img1">
 
-    <script src="script/script.js"></script>
-</body>
+      <div class="fade-overlay">
+        <h2 class="introTitle">You're moving to the Valley...</h2>
+        <p class="introText">
+          You've inherited your grandfather's old farm plot in <span class="highlight">Stardew Valley</span>.<br>
+          Armed with hand-me-down tools and a few coins, you set out to begin your new life!
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h1 id="About">WELCOME</h1>
+
+    <div class="aboutus">
+      <h2>About Us</h2>
+      <p> 2016 farm life simulation video game developed by Eric "ConcernedApe" Barone. Players take the role of a character who inherits their deceased grandfather's dilapidated farm. The game is open-ended, with players managing the farm by clearing land, growing seasonal crops, and raising animals. Players can acquire skills in farming, foraging, fishing, mining, and combat. Social features include building relationships with townspeople, with the option to marry and have a child.</p>
+    </div>
+
+    <hr class="divider2">
+
+<h1 id="gameTrailer"><u>GAME TRAILER</u></h1>
+    <div class="trailerArea">
+      <iframe src="https://www.youtube.com/embed/ot7uXNQskhs?si=rzwllhHxxU8JmUfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+      </div>
+
+   <div class="downloadarea" id="Download">
+  <h1>DOWNLOAD THE GAME NOW</h1>
+  <p>Available at:</p>
+  <section id="images">
+    <ul>
+      <li>
+        <a href="https://store.steampowered.com/app/413150/Stardew_Valley/" target="_blank" rel="noopener">
+          <img src="asset/STEAM LOGO.png" alt="Steam">
+        </a>
+      </li>
+      <li>
+        <a href="https://store.playstation.com/en-us/concept/227229/" target="_blank" rel="noopener">
+          <img src="asset/PLAYSTATION.png" alt="Playstation">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.xbox.com/en-US/games/store/stardew-valley/C3D891Z6TNQM" target="_blank" rel="noopener">
+          <img src="asset/XBOX LOGO.png" alt="XBOX">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.gog.com/game/stardew_valley" target="_blank" rel="noopener">
+          <img src="asset/GOG LOGO.png" alt="GOG">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.nintendo.com/store/products/stardew-valley-switch/" target="_blank" rel="noopener">
+          <img src="asset/NINTENDO LOGO.png" alt="Nintendo Switch">
+        </a>
+      </li>
+      <li>
+        <a href="https://play.google.com/store/apps/details?id=com.chucklefish.stardewvalley&hl=en" target="_blank" rel="noopener">
+          <img src="asset/ANDROID LOGO.png" alt="Android">
+        </a>
+      </li>
+      <li>
+        <a href="https://apps.apple.com/us/app/stardew-valley/id1406710800" target="_blank" rel="noopener">
+          <img src="asset/IOS LOGO.png" alt="iOS">
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
+<img src="asset/ConcernedAPE_logo.png" class="ConcernedApe"></img>
+      <footer>
+    <p>Made by John Cedric Aristoki Copyright @ 2026 Fan page</p>
+    <p>GRANGE is a registered trademark of National Grange of the Order of Patrons of Husbandry, used under license. All rights reserved.</p>
+    <p><a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank">Privacy Policy</a>   <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">Terms of Use</a></p>
+  </footer>
+  </body>
 </html>
