@@ -323,3 +323,23 @@ footer p {
     transform: translateX(0) translateY(-50%);
   }
 }
+
+/* ---------- MOBILE NAV FIT ---------- */
+
+@media (max-width: 700px) {
+  nav .navbar {
+    max-width: 96%;
+  }
+
+  .profpage img {
+    height: 2.2rem;
+  }
+
+  .navbar .menu li {
+    margin: 0 0.5rem;
+  }
+
+  .navbar .menu li a {
+    font-size: 0.95rem;
+  }
+}
