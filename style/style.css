@@ -89,6 +89,23 @@ nav .navbar {
   border-radius: 8px;
 }
 
+/* ---------- ACTIVE PAGE MARKER (aria-current is set by script.js) ---------- */
+
+.navbar .menu li a[aria-current="page"] {
+  color: #FFFFE6;
+  position: relative;
+}
+
+.navbar .menu li a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.2rem;
+  height: 4px;
+  background-color: #FFFFE6;
+}
+
 /* ---------- SIDE NAV AREA YALL ---------- */
 
 .sidenav {
@@ -367,5 +384,10 @@ footer p {
   .navbar .menu li a {
     font-size: 0.95rem;
     padding: 0.6rem 0.45rem;
+  }
+
+  .navbar .menu li a[aria-current="page"]::after {
+    left: 0.45rem;
+    right: 0.45rem;
   }
 }
