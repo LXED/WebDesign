@@ -29,10 +29,22 @@ function initScrollHeader() {
   var nav = document.querySelector('.site-nav');
   if (!nav) return;
 
+  /* scroll distance over which the bar goes from its resting tint to fully
+     solid. Bigger number = slower fade. */
+  var RAMP = 320;
+
   var ticking = false;
+  var last = -1;
 
   function update() {
-    nav.classList.toggle('scrolled', window.scrollY > 80);
+    /* rounded to 2dp so we only touch the DOM when it actually changes */
+    var progress = Math.round(Math.min(window.scrollY / RAMP, 1) * 100) / 100;
+
+    if (progress !== last) {
+      last = progress;
+      nav.style.setProperty('--nav-progress', progress);
+    }
+
     ticking = false;
   }
 
@@ -42,7 +54,7 @@ function initScrollHeader() {
     window.requestAnimationFrame(update);
   }, { passive: true });
 
-  update(); /* a reload part-way down the page has to start out solid */
+  update(); /* a reload part-way down the page must not start out clear */
 }
 
 /* ---------- DEMO BUTTON ---------- */
