@@ -55,7 +55,11 @@ body.home {
 
 /* ---------- NAV BAR VRO---------- */
 
-nav { 
+/* Scoped to .site-nav, never a bare `nav`: the sidenav is a <nav> too, and a
+   bare selector handed it this bar's 4rem height, which its overflow:hidden
+   then clipped down to a single icon. */
+
+.site-nav { 
   position: fixed; 
   left: 0; 
   top: 0; 
@@ -70,7 +74,7 @@ nav {
    bar itself is transparent. It is a pseudo-element rather than a background-
    image on nav because a gradient cannot be transitioned - this fades on
    opacity instead. z-index below keeps it behind the links. */
-nav::before {
+.site-nav::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -84,24 +88,24 @@ nav::before {
 }
 
 /* .scrolled is toggled past 80px by script.js */
-nav.scrolled {
+.site-nav.scrolled {
   background-color: #2064B1;
   box-shadow: 2px 10px 5px 1px rgba(0,0,0,0.34);
 }
 
-nav.scrolled::before {
+.site-nav.scrolled::before {
   opacity: 0;
 }
 
-nav:not(.scrolled) .menu li a {
+.site-nav:not(.scrolled) .menu li a {
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
 }
 
-nav:not(.scrolled) .profpage img {
+.site-nav:not(.scrolled) .profpage img {
   filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.8));
 }
 
-nav .navbar { 
+.site-nav .navbar { 
   display: flex; 
   align-items: center; 
   justify-content: space-between;
@@ -440,7 +444,7 @@ footer p {
 /* ---------- MOBILE NAV FIT ---------- */
 
 @media (max-width: 700px) {
-  nav .navbar {
+  .site-nav .navbar {
     max-width: 96%;
   }
 

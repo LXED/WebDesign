@@ -26,7 +26,7 @@ function pageName(pathname) {
 /* ---------- HEADER: TRANSPARENT OVER THE VIDEO, SOLID ONCE SCROLLED ---------- */
 
 function initScrollHeader() {
-  var nav = document.querySelector('nav[aria-label="Main"]');
+  var nav = document.querySelector('.site-nav');
   if (!nav) return;
 
   var ticking = false;
