@@ -12,28 +12,29 @@
     <link rel="stylesheet" href="style/pages.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- SHARED HEADER -- keep identical in index.html / about.html / contact.html -->
-    <nav>
+    <nav aria-label="Main">
       <div class="navbar">
         <div class="profpage">
-          <a href="index.html"><img src="asset/128x128 stardew logo chicken.png" alt="profile picture"></a>
+          <a href="index.html"><img src="asset/128x128 stardew logo chicken.png" alt="Stardew Valley home"></a>
         </div>
         <ul class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" target="_blank">Wiki</a></li>
+          <li><a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki" target="_blank" rel="noopener noreferrer">Wiki</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="sidenav">
-      <a href="https://x.com/concernedape" target="_blank"><img src="asset/TWITTER LOGO.png" alt="Twitter"></a>
-      <a href="https://www.facebook.com/StardewValley" target="_blank"><img src="asset/FACEBOOK LOGO.png" alt="Facebook"></a>
-      <a href="https://www.reddit.com/r/StardewValley/" target="_blank"><img src="asset/REDDIT LOGO.png" alt="Reddit"></a>
+    <nav class="sidenav" aria-label="Social links">
+      <a href="https://x.com/concernedape" target="_blank" rel="noopener noreferrer"><img src="asset/TWITTER LOGO.png" alt="Twitter"></a>
+      <a href="https://www.facebook.com/StardewValley" target="_blank" rel="noopener noreferrer"><img src="asset/FACEBOOK LOGO.png" alt="Facebook"></a>
+      <a href="https://www.reddit.com/r/StardewValley/" target="_blank" rel="noopener noreferrer"><img src="asset/REDDIT LOGO.png" alt="Reddit"></a>
       <a href="contact.html"><img src="asset/EMAIL ICON.png" alt="Email"></a>
-      <a href="https://discord.com/invite/stardewvalley" target="_blank"><img src="asset/DISCORD LOGO.png" alt="Discord"></a>
-    </div>
+      <a href="https://discord.com/invite/stardewvalley" target="_blank" rel="noopener noreferrer"><img src="asset/DISCORD LOGO.png" alt="Discord"></a>
+    </nav>
     <!-- /SHARED HEADER -->
 
     <video class="pageBackground" autoplay muted loop playsinline poster="asset/stardewbackgroundEmail.png">
@@ -42,7 +43,7 @@
 
     <h1 class="pageTitle">ABOUT US</h1>
 
-    <main class="main-content">
+    <main class="main-content" id="main">
         <section id="about" class="section">
             <h2>About This Project</h2>
             <p>

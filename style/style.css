@@ -21,6 +21,31 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+/* ---------- SKIP LINK ---------- */
+
+/* offscreen until focused, then lands above the nav (which is z-index 2) */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  z-index: 3;
+  padding: 0.7rem 1.2rem;
+  background-color: #FFFFE6;
+  color: #2064B1;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* stops the fixed header covering whatever an in-page anchor jumps to */
+:target {
+  scroll-margin-top: var(--nav-h);
+}
+
 /* ---------- NAV BAR VRO---------- */
 
 nav { 
