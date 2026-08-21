@@ -23,6 +23,28 @@ function pageName(pathname) {
   return last === '' ? 'index.html' : last.toLowerCase();
 }
 
+/* ---------- HEADER: TRANSPARENT OVER THE VIDEO, SOLID ONCE SCROLLED ---------- */
+
+function initScrollHeader() {
+  var nav = document.querySelector('nav[aria-label="Main"]');
+  if (!nav) return;
+
+  var ticking = false;
+
+  function update() {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }, { passive: true });
+
+  update(); /* a reload part-way down the page has to start out solid */
+}
+
 /* ---------- DEMO BUTTON ---------- */
 
 function initDemoButton() {
@@ -38,5 +60,6 @@ function initDemoButton() {
 
 document.addEventListener('DOMContentLoaded', function () {
   setActiveNavLink();
+  initScrollHeader();
   initDemoButton();
 });
