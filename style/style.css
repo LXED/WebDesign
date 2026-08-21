@@ -6,6 +6,11 @@
 /* HEADER HEIGHT -- nav height and the body offset must always agree */
 :root {
   --nav-h: 4rem;
+
+  /* the bar's own blue, kept as parts so the alpha can be varied separately */
+  --nav-blue: 32, 100, 177;
+  /* how opaque the bar is before you start scrolling */
+  --nav-rest-alpha: 0.42;
 }
 
 /* PARA SMOOTH SCROLL */
@@ -65,7 +70,11 @@ body.home {
   top: 0; 
   width: 100%; 
   height: var(--nav-h); 
-  background-color: transparent;
+  background-color: rgba(var(--nav-blue), var(--nav-rest-alpha));
+
+  /* softens the video behind the tint so the links stay readable */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 2;
   transition: background-color 0.35s ease, box-shadow 0.35s ease;
 }
@@ -80,7 +89,7 @@ body.home {
   inset: 0;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0)
   );
   transition: opacity 0.35s ease;
