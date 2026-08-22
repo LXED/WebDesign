@@ -1,4 +1,3 @@
-/* ---------- ACTIVE NAV LINK ---------- */
 
 /* Marks the current page in the header. This lives in JS so the nav markup can
    stay character-identical in all three HTML files. Works under file:// too. */
@@ -23,7 +22,7 @@ function pageName(pathname) {
   return last === '' ? 'index.html' : last.toLowerCase();
 }
 
-/* ---------- HEADER: TRANSPARENT OVER THE VIDEO, SOLID ONCE SCROLLED ---------- */
+/*HEADER: TRANSPARENT OVER THE VIDEO, SOLID ONCE SCROLLED*/
 
 function initScrollHeader() {
   var nav = document.querySelector('.site-nav');
