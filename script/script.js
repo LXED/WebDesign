@@ -57,21 +57,7 @@ function initScrollHeader() {
   update(); /* a reload part-way down the page must not start out clear */
 }
 
-/* ---------- DEMO BUTTON ---------- */
-
-function initDemoButton() {
-  var actionBtn = document.getElementById('action-btn');
-  var message = document.getElementById('message');
-
-  if (!actionBtn || !message) return;
-
-  actionBtn.addEventListener('click', function () {
-    message.textContent = 'Hello! You clicked the button.';
-  });
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   setActiveNavLink();
   initScrollHeader();
-  initDemoButton();
 });
