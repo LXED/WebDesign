@@ -1,8 +1,6 @@
-/* ==========================================================================
-   PAGES.CSS  --  ABOUT + CONTACT ONLY
-   Loaded AFTER style.css, which already handles the navbar, the sidenav,
-   the footer and the keyframes. Everything below is the blog-card look.
-   ========================================================================== */
+/* pages.css -- about + contact only.
+   Loaded after style.css, which already handles the navbar, the sidenav,
+   the footer and the keyframes. Everything below is the blog-card look. */
 
 /* FALLBACK COLOR SA LIKOD NG VIDEO */
 html {
@@ -14,7 +12,7 @@ body {
   background-color: transparent;
 }
 
-/* ---------- FIXED VIDEO BACKGROUND ---------- */
+/* FIXED VIDEO BACKGROUND */
 
 .pageBackground {
   position: fixed;
@@ -26,7 +24,7 @@ body {
   z-index: -1;
 }
 
-/* ---------- PAGE TITLE OVER THE VIDEO ---------- */
+/* PAGE TITLE OVER THE VIDEO */
 
 /* style.css already gives h1 the Press Start 2P + centered treatment */
 .pageTitle {
@@ -35,7 +33,7 @@ body {
   margin-bottom: 2.5rem;
 }
 
-/* ---------- CONTENT COLUMN ---------- */
+/* CONTENT COLUMN */
 
 .main-content {
   max-width: 70rem;
@@ -43,7 +41,7 @@ body {
   padding: 0 1.5rem 0 6rem; /* extra left padding clears the fixed sidenav */
 }
 
-/* ---------- THE CARD (same 9-slice frame as the official dev blog) ---------- */
+/* THE CARD (same 9-slice frame as the official dev blog) */
 
 .section {
   background-color: #FFF3CC;
@@ -74,7 +72,7 @@ body {
   line-height: 1.6;
 }
 
-/* ---------- TEAM CARDS ---------- */
+/* TEAM CARDS */
 
 .team-list {
   list-style: none;
@@ -143,7 +141,7 @@ body {
   margin: 0;
 }
 
-/* ---------- LISTS ---------- */
+/* LISTS */
 
 .tech-list,
 .contact-list {
@@ -175,7 +173,7 @@ body {
   color: #663300;
 }
 
-/* ---------- BUTTON (parang DEVELOPER BLOG plaque) ---------- */
+/* BUTTON (parang DEVELOPER BLOG plaque) */
 
 .btn {
   display: inline-block;
@@ -199,7 +197,7 @@ body {
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
   /* keeps clearing the sidenav rail, just tighter */
