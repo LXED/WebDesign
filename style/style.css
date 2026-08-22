@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* BODY________ */
+/* BODY */
 body {
   background-color: #FFFFBA;
   margin: 0;
@@ -26,7 +26,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-/* ---------- SKIP LINK ---------- */
+/* SKIP LINK */
 
 /* offscreen until focused, then lands above the nav (which is z-index 2) */
 .skip-link {
@@ -58,7 +58,7 @@ body.home {
   padding-top: 0;
 }
 
-/* ---------- NAV BAR VRO---------- */
+/* NAV BAR */
 
 /* Scoped to .site-nav, never a bare `nav`: the sidenav is a <nav> too, and a
    bare selector handed it this bar's 4rem height, which its overflow:hidden
@@ -175,7 +175,7 @@ body.home {
   border-radius: 8px;
 }
 
-/* ---------- ACTIVE PAGE MARKER (aria-current is set by script.js) ---------- */
+/* ACTIVE PAGE MARKER (aria-current is set by script.js) */
 
 .navbar .menu li a[aria-current="page"] {
   color: #FFFFE6;
@@ -192,7 +192,7 @@ body.home {
   background-color: #FFFFE6;
 }
 
-/* ---------- SIDE NAV AREA YALL ---------- */
+/* SIDE NAV AREA */
 
 .sidenav {
   position: fixed;
@@ -227,7 +227,7 @@ body.home {
   transform: scale(1.2);
 }
 
-/* ---------- HOMEPAGE MAINN!! ---------- */
+/* HOMEPAGE */
 
 .homepage {
   position: relative;
@@ -243,7 +243,7 @@ body.home {
   border-radius: 0 0 30px 30px;
 }
 
-/* LOGO STARDEWW */
+/* STARDEW LOGO */
 .img1 {
   width: 45%;
   max-width: 50rem;
@@ -254,7 +254,7 @@ body.home {
   animation: fadeIn 1s ease-out, float 4s ease-in-out infinite;
 }
 
-/* FADE OVERLAY AREA yes */
+/* FADE OVERLAY AREA */
 .fade-overlay {
   position: absolute;
   bottom: 0;
@@ -270,7 +270,7 @@ body.home {
   );
 }
 
-/* TEXTSSS */
+/* INTRO TEXT */
 .introTitle {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.6rem;
@@ -291,7 +291,7 @@ body.home {
   font-weight: bold;
 }
 
-/* ---------- DIVIDERSAHWDAHSD ---------- */
+/* DIVIDERS */
 
 .divider {
   width: 80%;
@@ -311,7 +311,7 @@ body.home {
   margin-top: 110px;
 }
 
-/* ---------- ABOUT US AREAWHADHAd ---------- */
+/* ABOUT US AREA */
 
 h1 {
   font-family: 'Press Start 2P', cursive;
@@ -346,7 +346,7 @@ h1 {
   font-size: 1.4rem;
 }
 
-/* ---------- TRAILER AREA!!!!!!! ---------- */
+/* TRAILER AREA */
 
 h1#gameTrailer {
   margin-top: 30%;
@@ -373,7 +373,7 @@ iframe {
   box-shadow: 2px 0px 5px 6px rgba(0,0,0,0.75);
 }
 
-/* ---------- DOWNLOAD AREA GUYS ---------- */
+/* DOWNLOAD AREA */
 
 .downloadarea {
   text-align: center;
@@ -386,7 +386,7 @@ iframe {
   font-weight: 650;
 }
 
-/* IMAGES BASTA */
+/* STORE LOGOS */
 section#images ul {
   list-style: none;
   display: flex;
@@ -403,12 +403,12 @@ section#images img {
 section#images img:hover {
   transform: scale(1.2) rotate(2deg);
 }
-/* ---------- KEYFRAMES BRUHRUHR ---------- */
+/* CONCERNEDAPE LOGO */
 .ConcernedApe{
   margin-left: 40%;
 }
 
-/* ---------- FOOTER AREA!! ---------- */
+/* FOOTER AREA */
 
 footer {
   background-color: #FFFFE6;
@@ -422,7 +422,7 @@ footer p {
   font-size: 14px;
 }
 
-/* ---------- KEYFRAMES BRUHRUHR ---------- */
+/* KEYFRAMES */
 
 @keyframes fadeIn {
   from {
@@ -452,7 +452,7 @@ footer p {
   }
 }
 
-/* ---------- MOBILE NAV FIT ---------- */
+/* MOBILE NAV FIT */
 
 @media (max-width: 700px) {
   .site-nav .navbar {
