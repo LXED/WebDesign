@@ -1,4 +1,3 @@
-
 /* Marks the current page in the header. This lives in JS so the nav markup can
    stay character-identical in all three HTML files. Works under file:// too. */
 function setActiveNavLink() {
